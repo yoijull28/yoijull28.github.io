@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="bootstrap-3.3.7/docs/assets/js/vendor/jquery.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<meta charset="UTF-8">
+	<title>Wisata Kuliner di Jawa Timur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<nav>
+    <ul>
+       <li><a href="Halaman utama.html">Halaman utama</a></li>
+       <li><a href="Surabaya.html">Surabaya</a></li>
+	    <li><a href="Malang.html">Malang</a></li>
+		 <li><a href="Kediri.html">Kediri</a></li>
+       <li><a href="Contact.html">Contact </a></li>
+    </ul>
+</nav>
+
+<div class="container">
+	
+	<div class="header">
+		<h1>Wisata Kuliner di Jawa Timur</h1>
+		<h4>Berikut Ini adalah Wisata Kuliner yang Ada di Jawa Timur</h4>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Cari tempat wisata..." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:100%;">List Beberapa Tempat Wisata Kuliner Di Jawa Timur</th>
+  </tr>
+  <tr>
+    <td><a href="Surabaya.html">1. Soto Ayam Cak Har</a></td>
+	
+  </tr>
+  <tr>
+    <td><a href="Surabaya.html">2. Sego Sambel Wonokromo Mak YEYE</a></td>
+  </tr>
+  <tr>
+    <td><a href="Surabaya.html">3. Nasi Goreng Jancok</a></td>
+  </tr>
+  <tr>
+    <td><a href="Malang.html">4. Bakso President</a></td>
+  </tr>
+  <tr>
+    <td><a href="Malang.html">5. Mie Gajah Mada</a></td>
+  </tr>
+  <tr>
+    <td><a href="Malang.html">6. Sate Landak Bu Ria</a></td>
+  </tr>
+  <tr>
+    <td><a href="Kediri.html">8. Nasi Pecel Sambel Tumpang</a></td>
+  </tr>
+  <td><a href="Kediri.html">9. Sate Emprit Mbah Darmo</a></td>
+  </tr>
+  <td><a href="Kediri.html">10. Soto Ayam Depot Kediri</a></td>
+  </tr>
+</table>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+	
+	</div> <!--/ .header -->
+
+	<div class="main">
+		
+		<div class="left">
+			<h3>1.Surabaya</h3>
+			<p>Kota Surabaya  adalah ibu kota Provinsi Jawa Timur, Indonesia, sekaligus kota metropolitan terbesar di provinsi tersebut. Surabaya merupakan kota terbesar kedua di Indonesia setelah Jakarta.</p>
+		    <p><img src="logo1.jpg" height="170" width="230" </p>
+		</div> <!--/ .header -->
+
+		<div class="middle">
+			<h3>2.Malang</h3>
+			<p>Kota Malang adalah sebuah kota yang terletak di Provinsi Jawa Timur, Indonesia, kota terbesar kedua di Jawa Timur setelah Surabaya, dan kota terbesar ke-12 di Indonesia.</p>
+			<p><img src="logo2.jpg" height="170" width="230" </p>
+		</div> <!--/ .middle -->
+
+		<div class="right">
+			<h3>3.Kediri</h3>
+			<p>Kota Kediri, adalah sebuah kota di Provinsi Jawa Timur, Indonesia. Kota ini terletak 130 km sebelah barat daya Surabaya dan merupakan kota terbesar ketiga di Jawa Timur setelah Surabaya dan Malang</p>
+			<p><img src="logo3.jpg" height="170" width="230" </p>
+		</div> <!--/ .right -->
+
+	</div> <!--/ .main -->
+	
+	<div class="footer">
+		<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['Surabaya', 11],
+  ['Malang', 11],
+  ['Kediri', 7],
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'Chart Wisata Kuliner Jawa Timur', 'width':550, 'height':400};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+		<p>Copyright &copy; 2018 </a></p>
+	</div> <!--/ .footer -->
+ 
+</div>
+
+</body>
+</html>
